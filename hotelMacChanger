@@ -5,9 +5,9 @@
 ######################################################
 
 read -p "Make sure your Device is powered off and you are not connected to the network then press [Enter] To Continue"
-sudo ifconfig wlp3s0 down
+sudo ifconfig <wlan> down
 sudo macchanger --mac <mac> <wlan>
-sudo ifconfig wlan up
+sudo ifconfig <wlan> up
 read -p "Now connect to the wireless network, Authenticate then press [Enter]"
 sudo ifconfig <wlan> down
 sudo macchanger --permanent <wlan>
