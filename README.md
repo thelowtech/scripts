@@ -1,2 +1,2 @@
-# scripts
+# Scripts
 Random Scripts i use
