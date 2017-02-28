@@ -1,0 +1,38 @@
+Sub PingFormat()
+'
+' PingFormat Macro
+'
+' Keyboard Shortcut: Ctrl+l
+'
+    Cells.Select
+    Cells.EntireColumn.AutoFit
+    With ActiveWindow
+        .SplitColumn = 3
+        .SplitRow = 16
+    End With
+    ActiveWindow.SplitRow = 0
+    ActiveWindow.SplitColumn = 1
+    ActiveWindow.SmallScroll ToRight:=-3
+    With ActiveWindow
+        .SplitColumn = 2
+        .SplitRow = 0
+    End With
+    ActiveWindow.FreezePanes = True
+    Selection.FormatConditions.Add Type:=xlTextString, String:="is Down", _
+        TextOperator:=xlContains
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Color = -16776961
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    Selection.FormatConditions.Add Type:=xlTextString, String:="Is up", _
+        TextOperator:=xlContains
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Color = -11489280
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    Range("A1").Select
+End Sub
