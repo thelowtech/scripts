@@ -7,10 +7,10 @@ sudo apt autoclean -y
 sudo apt autoremove --purge -y
 
 # most likely is already installed
-sudo apt -y install open-vm-tools
+sudo apt install open-vm-tools -y
 
 # remove Cloud-Init
-sudo apt purge cloud-init
+sudo apt purge cloud-init -y
 
 #Stop services for cleanup
 sudo service rsyslog stop
