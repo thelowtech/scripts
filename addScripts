@@ -1,0 +1,4 @@
+wget https://raw.githubusercontent.com/thelowtech/scripts/master/doUpdates.sh
+wget https://raw.githubusercontent.com/thelowtech/scripts/master/updateHalt.sh
+chmod +x *
+./doUpdates.sh
