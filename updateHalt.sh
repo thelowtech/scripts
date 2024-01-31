@@ -1,4 +1,3 @@
-export DEBIAN_FRONTEND=noninteractive
 sudo apt clean
 sudo apt update
 sudo apt DEBIAN_FRONTEND=noninteractive upgrade -y
